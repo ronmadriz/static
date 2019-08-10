@@ -1,0 +1,89 @@
+@media only screen and  (min-width: 992px) {
+	html {
+		body {
+			main {
+				table {
+					width:100%;
+					margin-top:2rem;
+					margin-bottom:2rem;
+					caption {
+					    color: $base;
+					    padding: .75rem 0;
+					    font-size: 2.5rem;
+					    text-transform: none;
+					    text-align: left;
+					}
+					thead {
+						th {
+						    background-color: $accent_1;
+						    color: $alternate;
+						    font-weight: 300;
+						    padding: .75rem 1rem;
+						    line-height: 115%;
+						}
+					}
+					tbody {
+						td {
+						    padding: .75rem 1rem;
+						    line-height: 115%;
+						}
+						tr:nth-child(odd) {
+						    background-color: $accent_1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and  (max-width: 991px) {
+	html {
+		body {
+			main {
+				table {
+					width:100%;					
+					margin-bottom:1rem;
+					caption {
+						font-size: 1.75rem;
+						margin-bottom: .75rem;
+						font-weight: bold;
+					}
+					thead {
+						position: absolute;
+						top: -9999px;
+						left: -9999px;
+					}
+					tbody {
+						tr {
+							display: block;
+							border: 1px solid $accent_1;
+							padding: .5rem;
+							td {
+								display: block;
+								border: none;
+								position: relative;
+								padding-left: 50%;
+								text-align: left;
+								&:before{
+								    content: attr(data-label);
+								    display: inline-block;
+								    line-height: 1.5;
+								    margin-left: -100%;
+								    width: 100%;
+								    white-space: nowrap;
+								}								
+							}
+							+ tr {
+								margin-top: 1.5em; 
+							}
+							&:nth-of-type(odd){
+								background-color: $accent_1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

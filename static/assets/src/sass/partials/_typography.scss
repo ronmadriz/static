@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Esteban|Montserrat');
+
+$primary:  'Montserrat', Helvetica, Arial, sans-serif;
+$secondary:'Esteban', Georgia, 'Times New Roman', serif;
+
+body {
+	font-size:16px;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $primary;
+	}
+	h1 {
+		font-size:1.65rem;
+		margin-bottom:1rem;
+	}
+	h2 {}
+	h3 {}
+	p, li, dd, dt, blockquote, code, span, div, section, small, address {
+		font-family: $primary;
+	}
+	p, li, td, dd {
+		font-size:80%;
+	} 
+	main {
+		h1 {
+		}
+		h2, h3, h4 {
+		    margin: 2rem 0;
+		}
+		p {
+			margin-bottom:1.75rem;
+		}
+	}
+}

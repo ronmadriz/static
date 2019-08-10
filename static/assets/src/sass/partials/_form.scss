@@ -1,0 +1,88 @@
+body {
+	main {
+		form {
+			fieldset {
+				&:first-of-type {
+					@media (min-width:586px) {
+						width:47.5%;
+						display: inline-block;
+					}
+				}
+				&:nth-of-type(2) {
+					@media (min-width:586px) {
+						width:47.5%;
+						display: inline-block;
+						vertical-align: top;
+					}
+				}						
+			}
+			label {
+				margin-left:1rem;
+			    font-size: 80%;
+			}
+			input {
+				&.form-control {
+					&[type=text], &[type=email], &[type=password], &[type=date], &[type=tel] {
+						margin-top: .25rem;
+						font-size: 1rem;
+						font-weight: normal;
+						border-style: solid;
+						border-radius:0;
+						outline: none;
+						transition: border-color 0.2s;
+						background-color: transparent;
+						color:$base;
+						&::placeholder {
+							color:$gray;
+							font-style: italic;
+						}
+					}
+					&:focus {
+						&[type=text], &[type=email], &[type=password], &[type=date], &[type=tel] {
+							border-color:$accent_1;
+						}
+					}
+					&[type=date] {
+						&::-webkit-datetime-edit-month-field {
+							color: $base;
+						}
+						&::-webkit-datetime-edit-day-field {
+							color: $base;
+						}
+						&::-webkit-datetime-edit-year-field {
+							color: $base;
+						}										
+						&::-webkit-inner-spin-button {
+							display:none;
+						}
+						&::-webkit-calendar-picker-indicator {
+							color:$base;
+							&:hover {
+							  background-color:transparent;
+							  color:$base;
+							  cursor: pointer;
+							}
+							&:active {
+							  color: $base;
+							}
+						}
+					}
+				}
+				&, button {
+					&[type=submit] {
+						&.btn {
+							border-radius: 0;
+						}
+					}					
+				}
+			}
+			&.sent {
+				div {
+					&.inside {
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}
